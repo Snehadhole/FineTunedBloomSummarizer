@@ -14,7 +14,7 @@ import json
 
 from clean_text import clean_text
 from tokenize_function import tokenize_function
-from get_model_tokenizer import get_model , get_tokanizer
+from get_model_tokenizer import get_model , get_tokenizer
 
 ##Get parameter from config file
 with open('config.json', 'r') as file:
