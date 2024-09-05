@@ -27,7 +27,7 @@ check_save_path = conf['training_path']
 final_model_save_path = conf['train_model_path']
 
 ###  Read csv file
-train_df = pd.read_csv("/content/newspaper-text-summarization-cnn-dailymail/cnn_dailymail/train.csv")[["article", "highlights"]]
+train_df = pd.read_csv("newspaper-text-summarization-cnn-dailymail/cnn_dailymail/train.csv")[["article", "highlights"]]
 ### Get only 500 rows from train_df for sampling; remove this line to use the entire dataset
 train_df = train_df.sample(500)
 ### lower the text and remove the special character using clean text fun
