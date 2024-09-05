@@ -49,6 +49,6 @@ model_path = config["model_path"]
 
 # Initialize ModelInference and get prediction
 
-model_inference = bloom_inference(,model_path)
+model_inference = bloom_inference(filtered_news_article,model_path)
 print(model_inference )
 ```
