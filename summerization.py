@@ -64,7 +64,7 @@ peft_params = LoraConfig(
 # Load the pre-trained model based on the specified model name
 model = get_model(model_name)
 #LOad Tokenizer
-tokenizer = get_tokanizer(model_name)
+tokenizer = get_tokenizer(model_name)
 
 # Apply the PEFT (Parameter-Efficient Fine-Tuning) method to the pre-trained model
 # using the provided PEFT parameters. This modifies the original model to include
