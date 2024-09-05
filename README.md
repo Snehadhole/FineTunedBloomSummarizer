@@ -27,6 +27,9 @@ Here’s an example script for predicting answers using a pre-trained model. Thi
 
 ```
 from inference import bloom_inference
+from clean_text import clean_text
+import json 
+
 news_article = """
 All but one of the 100 cities with the world’s worst air pollution last year were in Asia, according to a new report, with the climate crisis playing a pivotal role in bad air quality that is risking the health of billions of people worldwide.
 
@@ -37,14 +40,20 @@ The study looked specifically at fine particulate matter, or PM2.5, which is the
 “We see that in every part of our lives that air pollution has an impact,” said IQAir Global CEO Frank Hammes. “And it typically, in some of the most polluted countries, is likely shaving off anywhere between three to six years of people’s lives. And then before that will lead to many years of suffering that are entirely preventable if there’s better air quality.”
 
 """
-filtered_news_article = "Summarize the following article.\n\n" +filter_text(news_article) + "\nSummary:\n"
+filtered_news_article = "Summarize the following article.\n\n" +clean_text(news_article) + "\nSummary:\n"
 
 # Load configuration from JSON file
 with open('config.json', 'r') as file:
     config = json.load(file)
 
 # Get model path from configuration
-model_path = config["model_path"]
+model_path = config["train_model_path"]
+
+
+# Initialize ModelInference and get prediction
+
+model_inference = bloom_inference(filtered_news_article,model_path)
+print(model_inference )
 
 
 # Initialize ModelInference and get prediction
