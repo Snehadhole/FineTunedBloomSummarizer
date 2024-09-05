@@ -18,6 +18,10 @@ cd FineTunedBloomSummarizer
 ```
 pip install -r requirements.txt
 ```
+## unzip the file
+```
+!unzip newspaper-text-summarization-cnn-dailymail.zip
+```
 ## Run the Script
 ```
 python summerization.py
